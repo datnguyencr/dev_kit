@@ -1,280 +1,45 @@
-/* --- 0. Global Reset & Variables --- */
-:root {
-    --primary-color: #00FF7F; /* Neon Green/Terminal Green */
-    --background-dark: #1E1E1E; /* Dark background, similar to a code editor */
-    --text-light: #F8F8F2; /* Off-white text for contrast */
-    --accent-gray: #44475A; /* Subtle divider/border color */
-    --shadow-color: rgba(0, 255, 127, 0.5); /* Neon shadow effect */
-    
-    /* Font Definitions from HTML */
-    --font-anonymous-pro: 'Anonymous Pro', monospace;
-    --font-bebas-neue: 'Bebas Neue', sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Base Body and Text Styles */
-body {
-    font-family: var(--font-anonymous-pro);
-    line-height: 1.7;
-    color: var(--text-light);
-    background-color: var(--background-dark);
-    scroll-behavior: smooth;
-    padding-top: 60px; /* Space for fixed header */
-}
-
-/* Utility Classes */
-.anonymous-pro { font-family: var(--font-anonymous-pro); }
-.bebas-neue-regular { font-family: var(--font-bebas-neue); letter-spacing: 2px; }
-.center-text { text-align: center; }
-.shadow { text-shadow: 0 0 5px var(--shadow-color); }
-
-.section-header {
-    margin-bottom: 3rem;
-    font-size: 3rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-gray);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* --- Navigation & Header --- */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(30, 30, 30, 0.95);
-    border-bottom: 1px solid var(--accent-gray);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-}
-
-nav li a {
-    color: var(--text-light);
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-
-nav li a:hover {
-    color: var(--primary-color);
-    text-shadow: 0 0 8px var(--shadow-color);
-}
-
-/* --- General Section Styling --- */
-section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* ------------------------------------ */
-/* ANIMATION STYLES       */
-/* ------------------------------------ */
-
-/* Animation Keyframes */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Base state for sections that will be animated */
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Active state triggered by JavaScript */
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-@keyframes projectPulse {
-    0% { box-shadow: 0 0 5px var(--shadow-color); }
-    50% { box-shadow: 0 0 15px var(--shadow-color); }
-    100% { box-shadow: 0 0 5px var(--shadow-color); }
-}
-
-.section-divider {
-    border: none;
-    border-top: 1px dashed var(--primary-color);
-    margin: 40px auto;
-    width: 50%;
-    opacity: 0.3;
-}
-
-.spacer {
-    display: block;
-    height: 20px;
-}
-
-.project-subheader {
-    font-size: 2rem;
-    color: var(--text-light);
-    margin-top: 20px;
-}
-
-.sub-description {
-    font-size: 0.95rem;
-    color: var(--accent-gray);
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-}
-
-.projects-grid {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 20px;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--accent-gray);
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--text-light);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    animation: projectPulse 1.5s infinite ease-in-out;
-    background-color: #383b4b;
-}
-
-/* DEFAULT: Used by Mobile Apps */
-.project-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    border: 1px solid var(--text-light);
-    object-fit: cover;
-}
-
-.project-name {
-    font-family: var(--font-bebas-neue);
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.project-type {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    opacity: 0.7;
-}
-
-.project-type .fa-external-link-alt {
-    margin-left: 5px;
-    font-size: 0.8em;
-}
-
-/* --- 5. Contact Section --- */
-#contact {
-    text-align: center;
-    padding-bottom: 100px;
-}
-
-#contact p {
-    font-size: 1.1rem;
-    margin: 30px auto;
-    max-width: 600px;
-}
-
-#contact a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: text-shadow 0.3s;
-    font-weight: 700;
-}
-
-#contact p a {
-    padding: 0 5px;
-}
-
-#contact a:hover {
-    text-shadow: 0 0 5px var(--shadow-color);
-}
-
-.fa-github, .fa-gitlab, .fa-linkedin {
-    font-size: 1.2em;
-    margin-right: 5px;
-}
-
-/* --- Footer --- */
-footer {
-    padding: 20px 0;
-    background-color: var(--text-dark);
-    color: var(--accent-gray);
-    text-align: center;
-    font-size: 0.9rem;
-    border-top: 1px solid var(--accent-gray);
-}
-
-/* --- Responsiveness --- */
-@media (max-width: 900px) {
-    #hero h1 { font-size: 3rem; }
-    .role { font-size: 3rem; }
-    .section-header { font-size: 2.5rem; }
-    nav ul { flex-wrap: wrap; }
-}
-
-@media (max-width: 768px) {
-    #education .education-card {
-        width: 100%;
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 600px) {
-    body { padding-top: 80px; }
-    #hero h1 {
-        font-size: 2rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
-    .role { font-size: 2rem; }
-    .string { height: 0.9em; }
-    
-    .btn-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn { width: 90%; }
-    
-    nav li a {
-        padding: 8px 12px;
-        font-size: 1rem;
-    }
-}
+ /* (The CSS from the previous response goes here) */
+        body {
+            font-family: sans-serif; line-height: 1.6; margin: 20px;
+            background-color: #f4f4f9; color: #333;
+        }
+        header {
+            text-align: center; padding: 20px 0; background-color: #3f51b5;
+            color: white; margin-bottom: 20px; border-radius: 8px;
+        }
+        .container {
+            max-width: 1000px; margin: auto; padding: 0 15px;
+        }
+        .project-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: white; padding: 20px; border: 1px solid #ddd;
+            border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .project-card h3 {
+            margin-top: 0; color: #3f51b5; font-size: 1.5em;
+        }
+        .project-card p {
+            font-size: 0.9em; color: #555; margin-bottom: 15px;
+        }
+        .tags {
+            margin-bottom: 10px;
+        }
+        .tag {
+            display: inline-block; background-color: #e0e7ff; color: #3f51b5;
+            padding: 4px 8px; margin-right: 5px; border-radius: 4px;
+            font-size: 0.8em; font-weight: bold;
+        }
+        .links a {
+            display: inline-block; margin-right: 15px; color: #00bcd4;
+            text-decoration: none; font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
