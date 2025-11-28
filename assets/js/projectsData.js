@@ -9,7 +9,7 @@ const projectsData = [
         description: "A comprehensive task management application allowing users to create, assign, and track progress on projects and individual tasks.",
         tags: ["React", "Node.js", "MongoDB"],
         repoLink: "https://github.com/yourusername/task-manager-pro",
-        demoLink: "https://task-manager-pro-demo.com"
+        demoLink: "/placeholder/index.html"
     },
     {
         id: 2,

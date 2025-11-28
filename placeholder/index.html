@@ -4,25 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dynamic Placeholder Generator</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 40px;
-    background: #f0f0f0;
-  }
-  canvas {
-    display: none; /* hide original canvas */
-  }
-  img {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    cursor: grab;
-  }
-  h1 {
-    font-size: 24px;
-  }
-</style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -30,53 +12,10 @@
 <canvas id="placeholder"></canvas>
 <img id="placeholderImg" draggable="true" />
 
-<script>
-function getQueryParams() {
-  const params = {};
-  window.location.search.slice(1).split("&").forEach(pair => {
-    const [key, value] = pair.split("=");
-    if (key) params[key.toLowerCase()] = decodeURIComponent(value || "");
-  });
-  return params;
-}
-
-function generatePlaceholder(width, height, bgColor, textColor, text) {
-  const canvas = document.getElementById("placeholder");
-  canvas.width = width;
-  canvas.height = height;
-  const ctx = canvas.getContext("2d");
-
-  // Draw background
-  ctx.fillStyle = bgColor;
-  ctx.fillRect(0, 0, width, height);
-
-  // Draw text
-  ctx.fillStyle = textColor;
-  ctx.font = `${Math.floor(width/10)}px sans-serif`;
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText(text || `${width}x${height}`, width/2, height/2);
-
-  // Convert canvas to draggable image
-  const img = document.getElementById("placeholderImg");
-  img.src = canvas.toDataURL("image/png");
-}
-
-// Default parameters
-let params = getQueryParams();
-let width = parseInt(params.width) || 300;
-let height = parseInt(params.height) || 200;
-let bgColor = params.bg || "cccccc";
-if (!bgColor.startsWith("#")) bgColor = "#" + bgColor;
-
-let textColor = params.fg || "969696";
-if (!textColor.startsWith("#")) textColor = "#" + textColor;
-
-let text = params.text || `${width}x${height}`;
-
-generatePlaceholder(width, height, bgColor, textColor, text);
-</script>
-
-<p>Usage: <code>?width=400&height=300&bg=ff0000&fg=ffffff&text=Hello</code></p>
+<div class="usage-container">
+  <input type="text" id="usageInput" readonly />
+  <button id="copyBtn">Copy</button>
+</div>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
