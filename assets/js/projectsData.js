@@ -17,7 +17,7 @@ const projectsData = [
         description: "A lightweight and fast Python library for parsing large CSV files with automatic header detection and data type inference.",
         tags: ["Python", "Data Processing"],
         repoLink: "https://github.com/yourusername/csv-parser",
-        demoLink: "#" // Use '#' if there is no live demo
+        demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const projectsData = [
         description: "The source code for my professional portfolio, built with modern CSS techniques and fully optimized for mobile devices.",
         tags: ["HTML/CSS", "JavaScript", "Responsive Design"],
         repoLink: "https://github.com/yourusername/portfolio-site",
-        demoLink: "https://yourwebsite.com"
+           demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const projectsData = [
         description: "Firmware and backend infrastructure for a device that monitors temperature and humidity and reports data via a REST API.",
         tags: ["Arduino", "C++", "API"],
         repoLink: "https://github.com/yourusername/iot-monitor",
-        demoLink: "#"
+              demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 5,
@@ -41,7 +41,7 @@ const projectsData = [
         description: "A comprehensive task management application allowing users to create, assign, and track progress on projects and individual tasks.",
         tags: ["React", "Node.js", "MongoDB"],
         repoLink: "https://github.com/yourusername/task-manager-pro",
-        demoLink: "https://task-manager-pro-demo.com"
+        demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 6,
@@ -49,7 +49,7 @@ const projectsData = [
         description: "A lightweight and fast Python library for parsing large CSV files with automatic header detection and data type inference.",
         tags: ["Python", "Data Processing"],
         repoLink: "https://github.com/yourusername/csv-parser",
-        demoLink: "#" // Use '#' if there is no live demo
+             demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 7,
@@ -57,7 +57,7 @@ const projectsData = [
         description: "The source code for my professional portfolio, built with modern CSS techniques and fully optimized for mobile devices.",
         tags: ["HTML/CSS", "JavaScript", "Responsive Design"],
         repoLink: "https://github.com/yourusername/portfolio-site",
-        demoLink: "https://yourwebsite.com"
+         demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 8,
@@ -65,7 +65,7 @@ const projectsData = [
         description: "Firmware and backend infrastructure for a device that monitors temperature and humidity and reports data via a REST API.",
         tags: ["Arduino", "C++", "API"],
         repoLink: "https://github.com/yourusername/iot-monitor",
-        demoLink: "#"
+        demoLink: "/dev_kit/placeholder/index.html"
     }
 ];
 
