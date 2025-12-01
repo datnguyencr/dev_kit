@@ -5,11 +5,11 @@
 const projectsData = [
     {
         id: 1,
-        title: "Task Manager Pro (Full-Stack)",
-        description: "A comprehensive task management application allowing users to create, assign, and track progress on projects and individual tasks.",
-        tags: ["React", "Node.js", "MongoDB"],
+        title: "Placeholder Generator",
+        description: "A simple, fast and free image placeholder generator.",
+        tags: ["HTML/CSS", "JavaScript"],
         repoLink: "https://github.com/yourusername/task-manager-pro",
-        demoLink: "/placeholder/index.html"
+        demoLink: "/dev_kit/placeholder/index.html"
     },
     {
         id: 2,

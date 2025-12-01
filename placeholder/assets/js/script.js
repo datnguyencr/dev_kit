@@ -25,7 +25,7 @@ function generatePlaceholder(width, height, bgColor, textColor, text) {
 }
 
 // Example placeholder
-generatePlaceholder(400, 300, "#cccccc", "#969696", "Hello");
+generatePlaceholder(400, 247, "#eeeeee", "#444444", "Hello");
 
 // Copy button functionality
 document.getElementById("copyBtn").addEventListener("click", () => {
