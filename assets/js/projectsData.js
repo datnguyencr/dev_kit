@@ -9,7 +9,7 @@ const projectsData = [
         description: "A simple, fast and free image placeholder generator.",
         tags: ["HTML/CSS", "JavaScript"],
         repoLink: "https://github.com/yourusername/task-manager-pro",
-        demoLink: "/dev_kit/placeholder/index.html"
+        demoLink: "/placeholder/index.html"
     },
     {
         id: 2,
