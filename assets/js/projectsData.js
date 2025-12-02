@@ -7,25 +7,25 @@ const projectsData = [
         id: 1,
         title: "Placeholder Generator",
         description: "A simple, fast and free image placeholder generator.",
-        tags: ["HTML/CSS", "JavaScript"],
+        tags: ["Web Tool", "JavaScript"],
         repoLink: "https://github.com/datnguyencr/placeholder",
         demoLink: "https://datnguyencr.github.io/placeholder/"
     },
     {
         id: 2,
-        title: "Simple CSV Parser (Library)",
-        description: "A lightweight and fast Python library for parsing large CSV files with automatic header detection and data type inference.",
-        tags: ["Python", "Data Processing"],
-        repoLink: "https://github.com/datnguyencr/placeholder",
-        demoLink: "https://datnguyencr.github.io/placeholder/"
+        title: "Image to ASCII Converter",
+        description: "A web-based tool that converts images into ASCII art, supporting both black & white and colored output. Users can customize width, height, and character density, then download the resulting ASCII as an image.",
+        tags: ["JavaScript", "ASCII Art", "Web Tool", "Image Processing"],
+        repoLink: "https://github.com/datnguyencr/ascii_art",
+        demoLink: "https://datnguyencr.github.io/ascii_art/"
     },
     {
         id: 3,
         title: "Personal Portfolio Site (Front-End)",
         description: "The source code for my professional portfolio, built with modern CSS techniques and fully optimized for mobile devices.",
         tags: ["HTML/CSS", "JavaScript", "Responsive Design"],
-        repoLink: "https://github.com/datnguyencr/placeholder",
-        demoLink: "https://datnguyencr.github.io/placeholder/"
+        repoLink: "https://github.com/datnguyencr/ascii_art",
+        demoLink: "https://datnguyencr.github.io/ascii_art/"
     },
     {
         id: 4,
