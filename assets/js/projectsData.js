@@ -21,11 +21,11 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "Personal Portfolio Site (Front-End)",
-        description: "The source code for my professional portfolio, built with modern CSS techniques and fully optimized for mobile devices.",
+        title: "Image Rotator",
+        description: "Rotate images online by set angles or with a slider.",
         tags: ["HTML/CSS", "JavaScript", "Responsive Design"],
-        repoLink: "https://github.com/datnguyencr/ascii_art",
-        demoLink: "https://datnguyencr.github.io/ascii_art/"
+        repoLink: "https://github.com/datnguyencr/image-rotator",
+        demoLink: "https://datnguyencr.github.io/image-rotator/"
     },
     {
         id: 4,
