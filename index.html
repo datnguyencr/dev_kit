@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects & Repositories</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects & Repositories</title>
+  <script src="https://cdn.tailwindcss.com?min=true"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
 
-    <header>
-        <h1>My Development Portfolio</h1>
-        <p>A showcase of the repositories and projects I've been working on.</p>
-    </header>
+  <header class="text-center p-6 bg-gray-800 text-white mb-6 rounded-lg">
+    <h1 class="text-3xl font-bold">My Development Portfolio</h1>
+    <p class="mt-2 text-lg">A showcase of the repositories and projects I've been working on.</p>
+  </header>
 
-    <div class="container">
-        <div class="project-grid" id="projects-container">
-            </div>
+  <div class="max-w-6xl mx-auto px-4">
+    <div id="projects-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Project cards will be injected here -->
     </div>
+  </div>
 
-    <script src="assets/js/projectsData.js"></script>
-    <script src="assets/js/script.js"></script>
+  <script src="assets/js/projectsData.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
